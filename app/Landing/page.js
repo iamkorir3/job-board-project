@@ -9,7 +9,7 @@ export default function Landing() {
         <p>Connect to a job easily</p>
       </div>
       <div>
-        <Image src="" alt="prof pic" />
+        <Image src="coming" width="20" height="20" alt="prof pic" />
       </div>
     </div>
   );
