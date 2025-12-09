@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import styles from "./Landing.module.css";
 
 export default function Landing() {
@@ -9,8 +11,24 @@ export default function Landing() {
         <p>Connect to a job easily</p>
       </div>
       <div>
-        <Image src="coming" width="20" height="20" alt="prof pic" />
+        {/* <Image src="coming.jpg" width="20" height="20" alt="prof pic" /> */}
       </div>
+      <CallToAction />
+    </div>
+  );
+}
+
+function CallToAction() {
+  const router = useRouter();
+  function handleGetStarted() {
+    router.push("/Signup");
+  }
+  return (
+    <div className={styles.ctaContainer}>
+      <button onClick={handleGetStarted} className={styles.ctaButton}>
+        Get Started
+      </button>
+      <button className={styles.ctaButton}>Get Started</button>
     </div>
   );
 }

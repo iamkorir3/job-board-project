@@ -1,5 +1,6 @@
+"use client";
 import { useState } from "react";
-import styles from "./SignUp.module.css";
+import styles from "./signup.module.css";
 
 export default function Login() {
   const [formData, setFormData] = useState({

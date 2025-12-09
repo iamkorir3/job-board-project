@@ -11,7 +11,7 @@ export default function Profile() {
       <h2>Name: {user.nme}</h2>
       <h3>Age: {user.age}</h3>
       <h3>Email: {user.email}</h3>
-      <img src={user.img} alt="Profile Picture" />
+      {/* <img src={user.img} alt="Profile Picture" /> */}
     </div>
   );
 }

@@ -20,3 +20,20 @@
   text-align: center;
   margin-top: 16px;
 }
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+.ctaContainer .ctaButton {
+  background-color: #e86711;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
