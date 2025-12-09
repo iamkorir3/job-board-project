@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import styles from "./signup.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     fullName: "Alex Smith",
     email: "example@gmail.com",
@@ -18,86 +20,91 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    if (!formData.fullName || !formData.email || !formData.password) {
+      return;
+    }
+    router.push("/Dashboard");
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.formCard}>
-        <h2 className={styles.title}>Create Your Account?</h2>
-        <p className={styles.subtitle}>
-          Create your account to explore exciting travel destinations and
-          adventures.
-        </p>
+    <div className={styles.body}>
+      <div className={styles.container}>
+        <div className={styles.formCard}>
+          <h2 className={styles.title}>Create Your Account?</h2>
+          <p className={styles.subtitle}>
+            Create your account to explore exciting travel destinations and
+            adventures.
+          </p>
 
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <div className={styles.formGroup}>
-            <label htmlFor="fullName" className={styles.label}>
-              Full Name*
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              className={styles.input}
-            />
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div className={styles.formGroup}>
+              <label htmlFor="fullName" className={styles.label}>
+                Full Name*
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                className={styles.input}
+              />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="email" className={styles.label}>
+                Email address*
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className={styles.input}
+              />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="password" className={styles.label}>
+                Password*
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className={styles.input}
+              />
+            </div>
+
+            <button type="submit" className={styles.registerButton}>
+              Register
+            </button>
+          </form>
+
+          <div className={styles.divider}>
+            <span className={styles.dividerText}>Or continue with</span>
           </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="email" className={styles.label}>
-              Email address*
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className={styles.input}
-            />
+          <div className={styles.socialButtons}>
+            <button type="button" className={styles.socialButton}>
+              <span className={styles.socialIcon}>G</span>
+              Google
+            </button>
+            <button type="button" className={styles.socialButton}>
+              <span className={styles.socialIcon}>A</span>
+              Apple
+            </button>
           </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="password" className={styles.label}>
-              Password*
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              className={styles.input}
-            />
+          <div className={styles.signinLink}>
+            Already have an account?{" "}
+            <a href="#" className={styles.link}>
+              Sign in
+            </a>
           </div>
-
-          <button type="submit" className={styles.registerButton}>
-            Register
-          </button>
-        </form>
-
-        <div className={styles.divider}>
-          <span className={styles.dividerText}>Or continue with</span>
-        </div>
-
-        <div className={styles.socialButtons}>
-          <button type="button" className={styles.socialButton}>
-            <span className={styles.socialIcon}>G</span>
-            Google
-          </button>
-          <button type="button" className={styles.socialButton}>
-            <span className={styles.socialIcon}>A</span>
-            Apple
-          </button>
-        </div>
-
-        <div className={styles.signinLink}>
-          Already have an account?{" "}
-          <a href="#" className={styles.link}>
-            Sign in
-          </a>
         </div>
       </div>
     </div>
