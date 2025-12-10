@@ -1,7 +1,9 @@
+"use client";
 import { useState } from "react";
 import styles from "./Navigation.module.css";
-import { Link } from "react-router-dom";
-export default function Navigation({ cart }) {
+import { Link } from "next/link";
+
+export default function TopNav({ cart }) {
   const [searchQerry, setSearchQerry] = useState("");
   const [navOpen, setNavOpen] = useState(false);
   const [navMouseEvents, setNavMouseEvents] = useState(false);

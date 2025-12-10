@@ -1,0 +1,54 @@
+.navContainer {
+  background-color: rgb(25, 25, 56);
+  background: linear-gradient(
+    to right,
+    rgb(25, 25, 56),
+    rgb(34, 34, 80),
+    rgb(46, 46, 105)
+  );
+  height: 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.customNav {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navSearch {
+  display: flex;
+  align-items: center;
+  width: 10%;
+}
+.navSearch input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+.navSearch button {
+  background-color: #9e5a2d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.notification {
+  display: flex;
+  gap: space-between;
+}
+.notification:nth-child(1) {
+  text-align: center;
+  width: fit-content;
+}

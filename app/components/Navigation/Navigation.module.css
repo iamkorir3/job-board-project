@@ -62,7 +62,7 @@ NAVIGATION
 }
 /* font-size: 1.8rem; */
 
-[name="menu-outline"],
+/* [name="menu-outline"],
 [name="cart-outline"],
 [name="person-outline"] {
   border: none;
@@ -70,7 +70,7 @@ NAVIGATION
   font-size: 3rem;
   padding: 0;
   background-color: inherit;
-}
+} */
 
 .search {
   position: relative;
@@ -99,6 +99,6 @@ NAVIGATION
   opacity: 80%;
 }
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
