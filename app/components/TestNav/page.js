@@ -21,16 +21,15 @@ function CustomNav() {
     </div>
   );
 }
-
-function NavSearch() {
-  return (
-    <div className={styles.navSearch}>
-      <input type="text" placeholder="Search..." />
-      <button>Search</button>
-    </div>
-  );
-}
 function Notification() {
+  function NavSearch() {
+    return (
+      <div className={styles.navSearch}>
+        <input type="text" placeholder="Search..." />
+        <button>Search</button>
+      </div>
+    );
+  }
   return (
     <div className={styles.notification}>
       <button>not</button>

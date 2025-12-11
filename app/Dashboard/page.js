@@ -19,6 +19,13 @@ function DashBoardDisplay() {
     </div>
   );
 }
+function DashBoardDsplay() {
+  return (
+    <div className={styles.displayContainer}>
+      <Nav />
+    </div>
+  );
+}
 
 function ShortCutToFeature() {
   return (
