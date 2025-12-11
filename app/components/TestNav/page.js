@@ -5,7 +5,7 @@ export default function Nav() {
     <div className={styles.navContainer}>
       <CustomNav />
       <NavSearch />
-      <Notification />
+      {/* <Notification /> */}
     </div>
   );
 }
@@ -21,19 +21,19 @@ function CustomNav() {
     </div>
   );
 }
-function Notification() {
-  function NavSearch() {
-    return (
-      <div className={styles.navSearch}>
-        <input type="text" placeholder="Search..." />
-        <button>Search</button>
-      </div>
-    );
-  }
+// function Notification() {
+function NavSearch() {
   return (
-    <div className={styles.notification}>
-      <button>not</button>
-      <button>post a job</button>
+    <div className={styles.navSearch}>
+      <input type="text" placeholder="Search..." />
+      <button>Search</button>
     </div>
   );
 }
+return (
+  <div className={styles.notification}>
+    <button>not</button>
+    <button>post a job</button>
+  </div>
+);
+// }
