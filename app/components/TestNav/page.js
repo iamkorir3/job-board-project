@@ -5,7 +5,7 @@ export default function Nav() {
     <div className={styles.navContainer}>
       <CustomNav />
       <NavSearch />
-      {/* <Notification /> */}
+      <Notification />
     </div>
   );
 }
@@ -21,7 +21,6 @@ function CustomNav() {
     </div>
   );
 }
-// function Notification() {
 function NavSearch() {
   return (
     <div className={styles.navSearch}>
@@ -30,10 +29,11 @@ function NavSearch() {
     </div>
   );
 }
-return (
-  <div className={styles.notification}>
-    <button>not</button>
-    <button>post a job</button>
-  </div>
-);
-// }
+function Notification() {
+  return (
+    <div className={styles.notification}>
+      <button>not</button>
+      <button className={styles.postbtn}>post a job</button>
+    </div>
+  );
+}

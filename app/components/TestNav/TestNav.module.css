@@ -12,34 +12,46 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 .customNav {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  gap: 01rem;
+  text-decoration: none;
+}
+.customNav Link {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .navSearch {
   display: flex;
   align-items: center;
-  width: 10%;
+  width: 30%;
 }
 .navSearch input {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0.5rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  width: 80%;
 }
 .navSearch button {
   background-color: #9e5a2d;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   border-radius: 4px;
   margin-left: 0.5rem;
   cursor: pointer;
@@ -47,8 +59,19 @@
 .notification {
   display: flex;
   gap: space-between;
+  gap: 2rem;
 }
-.notification:nth-child(1) {
+
+.notification button {
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.postbtn {
   text-align: center;
   width: fit-content;
+  background-color: #2d9e2f !important;
+  padding: 0.5rem 1rem;
 }
