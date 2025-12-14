@@ -16,15 +16,15 @@ export default function Dashboard() {
 function DashBoardDisplay() {
   return (
     <div className={styles.displayContainer}>
-      {/* <Nav /> */}
-      <Profile />
+      <Nav />
+      <ContentDisplay />
     </div>
   );
 }
-function DashBoardDsplay() {
+function ContentDisplay() {
   return (
     <div className={styles.displayContainer}>
-      <Nav />
+      <Profile />
     </div>
   );
 }
