@@ -51,7 +51,7 @@ function ShortCutToFeature() {
       <div>
         <div></div>
       </div>
-      <div>
+      <div className={styles.logout}>
         <button>logout</button>
       </div>
     </div>

@@ -77,3 +77,11 @@
   color: white;
   border: none;
 }
+
+.logout {
+  background-color: #e94e4e;
+  color: white;
+  text-align: center;
+  border: none;
+  font-size: 1.4rem;
+}
