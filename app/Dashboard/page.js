@@ -27,11 +27,13 @@ function ContentDisplay() {
   return (
     <div className={styles.displayContainer}>
       <h2>DashBoard</h2>
-      <Stats />
-      <Stats />
-      <Stats />
-      <Stats />
-      <Stats />
+      <div>
+        <Stats />
+        <Stats />
+        <Stats />
+        <Stats />
+        <Stats />
+      </div>
     </div>
   );
 }
