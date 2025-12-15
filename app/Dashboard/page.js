@@ -2,6 +2,7 @@ import { Image } from "next/image";
 import styles from "./Dashboard.module.css";
 import Nav from "../components/TestNav/page.js";
 import Profile from "../Profile/page.js";
+import Stats from "../components/Stats.js";
 export default function Dashboard() {
   return (
     <div className={styles.dashboardContainer}>
@@ -17,6 +18,7 @@ function DashBoardDisplay() {
   return (
     <div className={styles.displayContainer}>
       <Nav />
+
       <ContentDisplay />
     </div>
   );
@@ -24,7 +26,12 @@ function DashBoardDisplay() {
 function ContentDisplay() {
   return (
     <div className={styles.displayContainer}>
-      <Profile />
+      <h2>DashBoard</h2>
+      <Stats />
+      <Stats />
+      <Stats />
+      <Stats />
+      <Stats />
     </div>
   );
 }

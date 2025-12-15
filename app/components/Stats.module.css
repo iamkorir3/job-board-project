@@ -7,7 +7,7 @@
   background-color: rgb(20, 20, 41);
   padding: 1.5rem;
   border-radius: 8px;
-  width: 15rem;
+  width: 17rem;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -16,5 +16,14 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
   gap: 0.5rem;
+}
+.statBox div h2 {
+  font-size: 2rem;
+  color: white;
+}
+.statBox div p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
