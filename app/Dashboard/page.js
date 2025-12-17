@@ -16,7 +16,7 @@ export default function Dashboard() {
 
 function DashBoardDisplay() {
   return (
-    <div className={styles.displayContainer}>
+    <div className={styles.displayTopContainer}>
       <Nav />
 
       <ContentDisplay />
@@ -26,7 +26,7 @@ function DashBoardDisplay() {
 function ContentDisplay() {
   return (
     <div className={styles.displayContainer}>
-      <h2>DashBoard</h2>
+      <h1 className={styles.dashBoardHeader}>DashBoard</h1>
       <div>
         <Stats />
         <Stats />
