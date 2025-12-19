@@ -110,3 +110,16 @@
   border: none;
   font-size: 1.4rem;
 }
+
+.graphPosted {
+  display: flex;
+  gap: 4rem;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.graph {
+  width: 70%;
+  background-color: red;
+}
