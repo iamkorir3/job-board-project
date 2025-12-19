@@ -3,7 +3,6 @@
   margin: 0 auto;
   background-color: rgb(38, 38, 85);
   background-color: rgb(27, 27, 54);
-  /* height: 100vh; */
   padding: 2rem;
   padding-top: 4rem;
   overflow-y: none;
@@ -21,7 +20,7 @@
   justify-content: start;
   align-items: center;
   gap: 0rem;
-  width: 80%;
+  width: 100%;
 
   margin: 1rem;
   background-color: rgb(24, 24, 49);

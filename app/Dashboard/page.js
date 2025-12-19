@@ -3,6 +3,7 @@ import styles from "./Dashboard.module.css";
 import Nav from "../components/TestNav/page.js";
 import Profile from "../Profile/page.js";
 import Stats from "../components/Stats.js";
+import Posted from "../components/Posted/page.js";
 export default function Dashboard() {
   return (
     <div className={styles.dashboardContainer}>
@@ -33,6 +34,10 @@ function ContentDisplay() {
         <Stats />
         <Stats />
         <Stats />
+      </div>
+      <div className={styles.graphPosted}>
+        <div className={styles.graph}></div>
+        <Posted />
       </div>
     </div>
   );
