@@ -1,17 +1,55 @@
+const jobs = [
+  {
+    title: "job one",
+    type: "full time",
+  },
+  {
+    title: "job one",
+    type: "full time",
+  },
+  {
+    title: "job one",
+    type: "full time",
+  },
+  {
+    title: "job one",
+    type: "full time",
+  },
+  {
+    title: "job one",
+    type: "full time",
+  },
+  {
+    title: "job one",
+    type: "full time",
+  },
+  {
+    title: "job one",
+    type: "full time",
+  },
+];
+
 function Posted() {
   return (
     <div>
-      <JobList />
+      {jobs.map((job, index) => (
+        <JobList key={index} job={job} />
+      ))}
     </div>
   );
 }
-function JobList() {
+function JobList({ job }) {
+  const { type, title } = job;
   return (
     <div>
       <ul>
-        <li>Job one</li>
-        <li>Job two</li>
-        <li>Job three</li>
+        <li>
+          <div>
+            <h3>{title}</h3>
+            <button>...</button>
+          </div>
+          <p>{type}</p>
+        </li>
       </ul>
     </div>
   );
