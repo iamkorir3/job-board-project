@@ -1,3 +1,4 @@
+import styles from "./Posted.module.css";
 const jobs = [
   {
     title: "job one",
@@ -31,7 +32,7 @@ const jobs = [
 
 function Posted() {
   return (
-    <div>
+    <div className={styles.postedContainer}>
       {jobs.map((job, index) => (
         <JobList key={index} job={job} />
       ))}
@@ -41,7 +42,7 @@ function Posted() {
 function JobList({ job }) {
   const { type, title } = job;
   return (
-    <div>
+    <div className={styles.job}>
       <ul>
         <li>
           <div>
