@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import styles from "./Posted.module.css";
 const jobs = [
   {
@@ -39,6 +41,7 @@ function Posted() {
 
 function JobList({ job }) {
   const { type, title } = job;
+  const [showopt, setshowopt] = useState(false);
 
   function showOptions() {}
 
@@ -51,10 +54,10 @@ function JobList({ job }) {
             <button onClick={showOptions}>...</button>
           </div>
           <p>{type}</p>
-          <div className={styles.options}>
+          <div className={`${styles.options} ${showopt && styles.hideoptions}`}>
             <button></button>
             <button>Visit</button>
-            <button>Do not show</button>
+            <button>hide</button>
           </div>
         </li>
       </ul>
