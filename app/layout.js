@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* For modern browsers with module support */}
+        <Script
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+          strategy="afterInteractive"
+          type="module"
+        />
+
+        {/* For older browsers without module support */}
+        <Script
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+          strategy="afterInteractive"
+          noModule
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -27,3 +43,31 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+// import Script from "next/script";
+
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en">
+//       <head>
+//         {/* For modern browsers with module support */}
+//         <Script
+//           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+//           strategy="afterInteractive"
+//           type="module"
+//         />
+
+//         {/* For older browsers without module support */}
+//         <Script
+//           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+//           strategy="afterInteractive"
+//           noModule
+//         />
+//       </head>
+//       <body
+//         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+//       >
+//         {children}
+//       </body>
+//     </html>
+//   );
+// }

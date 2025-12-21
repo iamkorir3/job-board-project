@@ -41,9 +41,13 @@ function Posted() {
 
 function JobList({ job }) {
   const { type, title } = job;
-  const [showopt, setshowopt] = useState(false);
+  const [showopt, setshowopt] = useState(true);
 
-  function showOptions() {}
+  function showOptions() {
+    console.log(showopt);
+    setshowopt(false);
+    // setshowopt(showopt === true ? false : true);
+  }
 
   return (
     <div className={styles.job}>
@@ -51,12 +55,14 @@ function JobList({ job }) {
         <li>
           <div>
             <h3>{title}</h3>
-            <button onClick={showOptions}>...</button>
+            <button onClick={showOptions} className={styles.optbtnn}>
+              <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </button>
           </div>
           <p>{type}</p>
-          <div className={`${styles.options} ${showopt && styles.hideoptions}`}>
-            <button></button>
-            <button>Visit</button>
+          <div className={`${styles.options} ${styles.showoption}`}>
+            <button>Save</button>
+            <button>view</button>
             <button>hide</button>
           </div>
         </li>
