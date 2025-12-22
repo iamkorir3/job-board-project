@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./Profile.module.css";
 export default function Profile() {
   const user = {
@@ -16,23 +19,54 @@ export default function Profile() {
   );
 }
 function UserInfo({ user }) {
+  const [publicview, setPublicview] = useState(false);
+  function switchViews() {
+    setPublicview(publicview === true ? false : true);
+    console.log("clicj");
+  }
   return (
-    <div className={styles.userInfo}>
-      <img src={user.img} alt="Profile Picture" />
-      <div className={styles.userInfoHeader}>
-        <div className={styles.userHeader}>
-          <div className={styles.userDetails}>
-            <h2>Name: {user.name}</h2>
-            <p>{user.location}</p>
+    <>
+      {publicview ? (
+        <div className={styles.userInfo}>
+          <img src={user.img} alt="Profile Picture" />
+          <div className={styles.userInfoHeader}>
+            <div className={styles.userHeader}>
+              <div className={styles.userDetails}>
+                <h2>Name: {user.name}</h2>
+                <p>{user.location}</p>
+              </div>
+              <button className={styles.editBtn}>Edit </button>
+              <button onClick={switchViews()} className={styles.publicBtn}>
+                Public View
+              </button>
+            </div>
+            <div className={styles.userBio}>
+              <p>{user.description}</p>
+              <p>Email: {user.email}</p>
+            </div>
           </div>
-          <button className={styles.editBtn}>Edit Profile</button>
-          <button>Public View</button>
         </div>
-        <div className={styles.userBio}>
-          <p>{user.description}</p>
-          <p>Email: {user.email}</p>
+      ) : (
+        <div className={styles.userInfo}>
+          <img src={user.img} alt="Profile Picture" />
+          <div className={styles.userInfoHeader}>
+            <div className={styles.userHeader}>
+              <div className={styles.userDetails}>
+                <h2>Name: {user.name}</h2>
+                <p>{user.location}</p>
+              </div>
+              {/* <button className={styles.editBtn}>Edit </button> */}
+              <button onClick={switchViews} className={styles.publicBtn}>
+                Public View
+              </button>
+            </div>
+            <div className={styles.userBio}>
+              <p>{user.description}</p>
+              <p>Email: {user.email}</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
