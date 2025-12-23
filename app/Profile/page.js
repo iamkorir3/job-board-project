@@ -19,7 +19,7 @@ export default function Profile() {
   );
 }
 function UserInfo({ user }) {
-  const [publicview, setPublicview] = useState(false);
+  const [publicview, setPublicview] = useState(true);
   function switchViews() {
     setPublicview(publicview === true ? false : true);
     console.log("clicj");
