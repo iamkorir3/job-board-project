@@ -1,9 +1,11 @@
+"use client";
 import { Image } from "next/image";
 import styles from "./Dashboard.module.css";
 import Nav from "../components/TestNav/page.js";
 import Profile from "../Profile/page.js";
 import Stats from "../components/Stats.js";
 import Posted from "../components/Posted/page.js";
+import { useState } from "react";
 
 export default function Dashboard() {
   return (
@@ -17,11 +19,21 @@ export default function Dashboard() {
 }
 
 function DashBoardDisplay() {
+  const [dashboard, setdashboard] = useState(false);
+  const [profile, setprofile] = useState(true);
+  const [myJobs, setMyJobs] = useState(false);
+  const [messages, setMessages] = useState(false);
+  const [candidates, setCandidates] = useState(false);
+  const [memberShip, setMemberShip] = useState(false);
+  const [setting, setSetting] = useState(false);
+  const [delAccount, setDelAccount] = useState(false);
+
   return (
     <div className={styles.displayTopContainer}>
       <Nav />
 
-      <ContentDisplay />
+      {dashboard && <ContentDisplay />}
+      {profile && <Profile />}
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function Profile() {
 function UserInfo({ user }) {
   const [publicview, setPublicview] = useState(true);
   function switchViews() {
-    setPublicview(publicview === true ? false : true);
+    setPublicview((publicview) => !publicview);
     console.log("clicj");
   }
   return (

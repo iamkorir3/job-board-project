@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  width: 70%;
+  width: 60rem;
+  margin: 2rem auto;
 }
 
 .userInfo {
