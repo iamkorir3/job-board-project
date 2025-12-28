@@ -1,3 +1,22 @@
+const myjobs = [
+  {
+    title: "my jobs",
+    descriptions: "describing my ",
+  },
+  {
+    title: "my jobs",
+    descriptions: "describing my ",
+  },
+  {
+    title: "my jobs",
+    descriptions: "describing my ",
+  },
+  {
+    title: "my jobs",
+    descriptions: "describing my ",
+  },
+];
+
 export default function Jobs() {
   return <div>jobs</div>;
 }
