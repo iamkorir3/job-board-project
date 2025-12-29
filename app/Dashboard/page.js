@@ -21,12 +21,12 @@ export default function Dashboard() {
 function DashBoardDisplay() {
   const [dashboard, setdashboard] = useState(true);
   const [profile, setprofile] = useState(false);
-  const [myJobs, setMyJobs] = useState(false);
-  const [messages, setMessages] = useState(false);
-  const [candidates, setCandidates] = useState(false);
-  const [memberShip, setMemberShip] = useState(false);
-  const [setting, setSetting] = useState(false);
-  const [delAccount, setDelAccount] = useState(false);
+  // const [myJobs, setMyJobs] = useState(false);
+  // const [messages, setMessages] = useState(false);
+  // const [candidates, setCandidates] = useState(false);
+  // const [memberShip, setMemberShip] = useState(false);
+  // const [setting, setSetting] = useState(false);
+  // const [delAccount, setDelAccount] = useState(false);
 
   return (
     <div className={styles.displayTopContainer}>

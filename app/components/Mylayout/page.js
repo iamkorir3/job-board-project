@@ -1,5 +1,10 @@
+import Dashboard from "../../DashBoard/page";
 function Mylayout() {
-  return <div>to import pages</div>;
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 }
 
 export default Mylayout;
