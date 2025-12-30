@@ -1,3 +1,4 @@
+import styles from "./Jobs.module.css";
 const myjobs = [
   {
     title: "my jobs",
@@ -7,10 +8,7 @@ const myjobs = [
     title: "my jobs",
     descriptions: "describing my ",
   },
-  {
-    title: "my jobs",
-    descriptions: "describing my ",
-  },
+
   {
     title: "my jobs",
     descriptions: "describing my ",
@@ -19,7 +17,7 @@ const myjobs = [
 
 export default function Jobs() {
   return (
-    <div>
+    <div className={styles.containerJobs}>
       {myjobs.map((job, index) => (
         <Job key={index} job={job} />
       ))}
