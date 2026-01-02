@@ -6,6 +6,7 @@ import Profile from "../Profile/page.js";
 import Stats from "../components/Stats.js";
 import Posted from "../components/Posted/page.js";
 import { useState } from "react";
+import Messages from "../components/Messages/page.js";
 
 export default function Dashboard() {
   return (
@@ -49,7 +50,9 @@ function ContentDisplay() {
         <Stats />
       </div>
       <div className={styles.graphPosted}>
-        <div className={styles.graph}></div>
+        <div className={styles.graph}>
+          <Messages />
+        </div>
         <Posted />
       </div>
     </div>

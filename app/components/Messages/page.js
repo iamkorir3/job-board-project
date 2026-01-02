@@ -26,26 +26,37 @@ const messages = [
 ];
 
 function Messages() {
-  return <div></div>;
-}
-
-function Messenger() {
   return (
     <div>
-      <duv></duv>
-      <duv>
-        <h2>name</h2>
-        <p>last message</p>
-      </duv>
+      {messages.map((messagebody, index) => (
+        <Messenger key={index} messagebody={messagebody} />
+      ))}
     </div>
   );
 }
 
-function ViewMessage() {
-  const MessangerMessges = messages.meseges;
+function Messenger({ messagebody }) {
+  const { name, meseges } = messagebody;
+  console.log(meseges);
+  const lastMessage = meseges[meseges.length - 1];
+
   return (
     <div>
-      {MessangerMessges.map((message, index) => (
+      <div>
+        <h2>{name}</h2>
+        <p>{lastMessage}</p>
+      </div>
+      <div>
+        <ViewMessage meseges={meseges} />
+      </div>
+    </div>
+  );
+}
+
+function ViewMessage({ meseges }) {
+  return (
+    <div>
+      {meseges.map((message, index) => (
         <p key={index}>{message}</p>
       ))}
     </div>
