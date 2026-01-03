@@ -1,3 +1,4 @@
+import styles from "./messages.module.css";
 const messages = [
   {
     name: "messenger",
@@ -37,12 +38,12 @@ function Messages() {
 
 function Messenger({ messagebody }) {
   const { name, meseges } = messagebody;
-  console.log(meseges);
+  //   console.log(meseges);
   const lastMessage = meseges[meseges.length - 1];
 
   return (
     <div>
-      <div>
+      <div className={styles.messangers}>
         <h2>{name}</h2>
         <p>{lastMessage}</p>
       </div>
@@ -55,7 +56,7 @@ function Messenger({ messagebody }) {
 
 function ViewMessage({ meseges }) {
   return (
-    <div>
+    <div className={styles.messages}>
       {meseges.map((message, index) => (
         <p key={index}>{message}</p>
       ))}

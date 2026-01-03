@@ -1,0 +1,11 @@
+.continer {
+  width: 50rem;
+}
+.messangers {
+  display: flex;
+  flex-direction: column;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+}
