@@ -28,7 +28,7 @@ const messages = [
 
 function Messages() {
   return (
-    <div>
+    <div className={styles.MessagerProfile}>
       {messages.map((messagebody, index) => (
         <Messenger key={index} messagebody={messagebody} />
       ))}
@@ -47,9 +47,7 @@ function Messenger({ messagebody }) {
         <h2>{name}</h2>
         <p>{lastMessage}</p>
       </div>
-      <div>
-        <ViewMessage meseges={meseges} />
-      </div>
+      <div>{/* <ViewMessage meseges={meseges} /> */}</div>
     </div>
   );
 }

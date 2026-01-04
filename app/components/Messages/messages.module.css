@@ -1,9 +1,17 @@
 .continer {
-  width: 50rem;
+  width: 30rem;
+}
+
+.MessagerProfile {
+  display: flex;
+  flex-direction: column;
 }
 .messangers {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  /* flex-direction: column; */
 }
 .messages {
   display: flex;
