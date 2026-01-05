@@ -5,6 +5,8 @@
 .MessagerProfile {
   display: flex;
   flex-direction: column;
+  background-color: rgb(31, 30, 30);
+  padding: 1rem 2rem;
 }
 .messangers {
   display: flex;
@@ -12,6 +14,10 @@
   width: fit-content;
   height: fit-content;
   /* flex-direction: column; */
+}
+
+.messangers h1 {
+  font-size: 1.8rem;
 }
 .messages {
   display: flex;

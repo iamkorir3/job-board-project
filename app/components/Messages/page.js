@@ -28,10 +28,17 @@ const messages = [
 
 function Messages() {
   return (
-    <div className={styles.MessagerProfile}>
-      {messages.map((messagebody, index) => (
-        <Messenger key={index} messagebody={messagebody} />
-      ))}
+    <div style={{ display: "flex" }}>
+      <div className={styles.MessagerProfile}>
+        {messages.map((messagebody, index) => (
+          <Messenger key={index} messagebody={messagebody} />
+        ))}
+      </div>
+      <div>
+        {messages.map((messagebody, index) => (
+          <ViewMessage key={index} meseges={messagebody.meseges} />
+        ))}
+      </div>
     </div>
   );
 }
