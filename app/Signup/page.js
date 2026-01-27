@@ -43,7 +43,7 @@ export default function Login() {
               </label>
               <input
                 type="text"
-                id="fullName"
+          
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
@@ -57,7 +57,7 @@ export default function Login() {
               </label>
               <input
                 type="email"
-                id="email"
+              
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -71,7 +71,7 @@ export default function Login() {
               </label>
               <input
                 type="password"
-                id="password"
+              
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
