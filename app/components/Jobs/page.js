@@ -31,7 +31,10 @@ function Job({ job }) {
     <div>
       <h1>{title}</h1>
       <p>{description}</p>
+    <div>
       <button>View</button>
+      <button>Bookmark</button>
+    </div>
     </div>
   );
 }
