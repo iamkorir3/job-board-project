@@ -12,6 +12,7 @@ export default function Profile() {
       "i am a software developer, love coding and coffee. Based in Nairobi. Looking for new opportunities to grow and learn in tech field.",
     location: "Nairobi",
   };
+
   return (
     <div className={styles.profileContainer}>
       <UserInfo user={user} />
