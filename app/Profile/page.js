@@ -9,7 +9,7 @@ export default function Profile() {
     img: "ui.jpg",
     email: "korir@gmail.com",
     description:
-      "i am a software developer, love coding and coffee. Based in Nairobi. Looking for new opportunities to grow and learn.",
+      "i am a software developer, love coding and coffee. Based in Nairobi. Looking for new opportunities to grow and learn in tech field.",
     location: "Nairobi",
   };
   return (
