@@ -1,8 +1,10 @@
+import {useSelector} from "react";
 const jobs = [
   { titlte: "korir", time: "22", description: "lorem ipsum" },
   { titlte: "korir", time: "22", description: "lorem ipsum" },
 
 ];
+// i will have to get jobs from jobs store
 
 const PostJob = (job) => {
   // getting the selected job and adding it to the jo array
