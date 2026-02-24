@@ -24,16 +24,24 @@ function CallToAction() {
     router.push("/Signup");
   }
 
-  function toAbout() {
+  function handleAbout() {
     router.push("/AboutUs");
+  }
+
+    function handleContactUs() {
+    router.push("/contactpage");
   }
   return (
     <div className={styles.ctaContainer}>
       <button onClick={handleGetStarted} className={styles.ctaButton}>
         Get Started
       </button>
-      <button className={styles.ctaButton} onClick={toAbout}>
+      <button className={styles.ctaButton} onClick={handleAbout}>
         About us
+      </button>
+
+     <button className={styles.ctaButton} onClick={handleContactUs}>
+       Contact us
       </button>
     </div>
   );
