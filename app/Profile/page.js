@@ -23,7 +23,7 @@ function UserInfo({ user }) {
   const [publicview, setPublicview] = useState(true);
   function switchViews() {
     setPublicview((publicview) => !publicview);
-    console.log("clicj");
+
   }
   return (
     <>
@@ -42,6 +42,7 @@ function UserInfo({ user }) {
               </button>
             </div>
             <div className={styles.userBio}>
+    <img src="userimg" alt="userimg" />
               <p>{user.description}</p>
               <p>Email: {user.email}</p>
             </div>
