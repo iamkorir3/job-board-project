@@ -39,15 +39,27 @@ function DashBoardDisplay() {
   );
 }
 function ContentDisplay() {
+  const statistics = [
+    {title: "",
+     description:"",
+     any:""
+    },
+    {title: "",
+     description:"",
+     any:""
+    },
+    {title: "",
+     description:"",
+     any:""
+    },
+  ];
+  const statslength = statistics.Length;
   return (
     <div className={styles.displayContainer}>
       <h1 className={styles.dashBoardHeader}>DashBoard</h1>
       <div>
-        <Stats />
-        <Stats />
-        <Stats />
-        <Stats />
-        <Stats />
+  {statistics.map((stat, index) => (<Stats stat={stat} key={index} />))}
+        
       </div>
       <div className={styles.graphPosted}>
         <div className={styles.graph}>
