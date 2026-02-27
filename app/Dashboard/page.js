@@ -72,6 +72,8 @@ function ContentDisplay() {
 }
 
 function ShortCutToFeature() {
+  //shortcut functions
+  
   return (
     <div className={styles.shortCut}>
       <div className={styles.profilePreview}>
@@ -80,15 +82,15 @@ function ShortCutToFeature() {
         <p>koir emm..</p>
       </div>
       <div className={styles.buttonsContainer}>
-        <button>DashBoard</button>
-        <button>My Profile</button>
-        <button>My jobs</button>
-        <button>Messages</button>
-        <button>Submit Job</button>
-        <button>Save Candidate</button>
-        <button>Membership</button>
-        <button>Account Setting</button>
-        <button>Delete Account</button>
+        <button onClick={} >DashBoard</button>
+        <button onClick={}>My Profile</button>
+        <button onClick={}>My jobs</button>
+        <button onClick={}>Messages</button>
+        <button onClick={}>Submit Job</button>
+        <button onClick={}>Save Candidate</button>
+        <button onClick={}>Membership</button>
+        <button onClick={}>Account Setting</button>
+        <button onClick={}>Delete Account</button>
       </div>
       <div>
         <div></div>
