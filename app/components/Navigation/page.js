@@ -60,7 +60,7 @@ export default function TopNav({ cart }) {
 function Logo() {
   return (
     <div>
-      <h2 className={styles.heading}>Digistore</h2>
+      <h2 className={styles.heading}>Job board</h2>
     </div>
   );
 }
