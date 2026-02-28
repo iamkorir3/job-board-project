@@ -119,12 +119,8 @@ function SideMenu({ navOpen, navMouseEvents }) {
     <>
       {navOpen || navMouseEvents ? (
         <div className={styles.menu}>
-          <button>jkcfvvnv</button>
-          <button>Korir btn</button>
-          <button>code, testing keyboarb</button>
-          <button>Korir btn</button>
-          <button>Korir btn</button>
-          <button>Korir btn</button>
+          <button>i will place buttons here</button>
+        
         </div>
       ) : (
         ""
